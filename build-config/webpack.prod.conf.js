@@ -110,69 +110,9 @@ const webpackConfig = merge(baseWebpackConfig, {
             append: true,
             useHash: true,
             prependExternals: true,
-            links: [
-                {
-                    useHash: false,
-                    publicPath: false,
-                    path: 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined',
-                    type: 'css',
-                    attributes: {
-                        rel: 'stylesheet',
-                    },
-                },
-                {
-                    useHash: false,
-                    publicPath: false,
-                    path: 'https://cdn.quilljs.com/1.2.6/quill.snow.css',
-                    type: 'css',
-                    attributes: {
-                        rel: 'stylesheet',
-                    },
-                },
-                {
-                    publicPath: config.CDN_PUBLIC_PATH === '', //user public path if cdn disabled
-                    path: config.CDN_PUBLIC_PATH === '' ? 'static/pwa/manifest.json' : '/static/pwa/manifest.json',
-                    attributes: {
-                        rel: 'manifest',
-                    },
-                },
-                {
-                    path: 'static/img/icons/app-icon-192.png',
-                    attributes: {
-                        rel: 'apple-touch-icon',
-                    },
-                },
-            ],
+            links: [],
             //Scripts which should be loaded first
-            scripts: [
-                {
-                    append: false,
-                    useHash: false,
-                    path: 'static/smartlook.js',
-                    attributes: {
-                        type: 'text/plain',
-                        charset: 'utf-8',
-                        'data-categories': 'analytics'
-                    },
-                },
-                {
-                    append: false,
-                    useHash: false,
-                    path: 'static/newrelic.js',
-                    attributes: {
-                        type: 'text/plain',
-                        'data-categories': 'analytics'
-                    },
-                },
-                //firebase push notification script - check if after removing this if it still works
-                {
-                    append: false,
-                    useHash: false,
-                    publicPath: false,
-                    path: 'https://www.gstatic.com/firebasejs/4.6.2/firebase.js',
-                    type: 'js',
-                },
-            ],
+            scripts: [],
             tags: [],
         }),
     ],

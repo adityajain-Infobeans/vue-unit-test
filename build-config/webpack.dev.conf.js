@@ -72,43 +72,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
             append: true,
             prependExternals: true,
             useHash: true,
-            links: [
-                {
-                    useHash: false,
-                    publicPath: false,
-                    path: 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined',
-                    type: 'css',
-                    attributes: {
-                        rel: 'stylesheet',
-                    },
-                },
-                {
-                    useHash: false,
-                    publicPath: false,
-                    path: 'https://cdn.quilljs.com/1.2.6/quill.snow.css',
-                    type: 'css',
-                    attributes: {
-                        rel: 'stylesheet',
-                    },
-                },
-                {
-                    path: 'static/pwa/manifest.json',
-                    attributes: {
-                        rel: 'manifest',
-                    },
-                },
-            ],
+            links: [],
             //Scripts which should be loaded first
-            scripts: [
-                //firebase push notification script - check if after removing this if it still works
-                {
-                    append: false,
-                    useHash: false,
-                    publicPath: false,
-                    path: 'https://www.gstatic.com/firebasejs/4.6.2/firebase.js',
-                    type: 'js',
-                },
-            ],
+            scripts: [],
             tags: [],
         }),
 
