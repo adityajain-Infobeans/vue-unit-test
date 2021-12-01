@@ -1,0 +1,29 @@
+{
+    "eslint.enable": true,
+    "eslint.lintTask.enable": true,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false,
+    "editor.formatOnSave": true,
+    "eslint.validate": [
+        "javascript",
+        "vue"
+    ],
+    "prettier.disableLanguages": [],
+    "prettier.printWidth": 120,
+    "prettier.semi": true,
+    "prettier.singleQuote": true,
+    "prettier.tabWidth": 4,
+    "prettier.trailingComma": "es5",
+    "prettier.arrowParens": "avoid",
+    "prettier.bracketSpacing": true,
+    "prettier.useTabs": false,
+    "vetur.format.options.tabSize": 4,
+    "vetur.format.defaultFormatter.js": "prettier-eslint",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+}

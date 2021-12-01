@@ -1,0 +1,5 @@
+Code Coverage Report Summary:
+    Statements 65.86% (1385/2103)
+    Branches 60.26% (652/1082)
+    Functions 75.86% (597/787)
+    Lines 66% (1380/2091)

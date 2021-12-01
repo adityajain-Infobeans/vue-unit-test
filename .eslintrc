@@ -1,0 +1,72 @@
+{
+    "root": true,
+    "extends": [
+        "plugin:vue/strongly-recommended",
+        "plugin:vue/recommended",
+        "prettier",
+        "prettier/vue"
+    ],
+    "plugins": [
+        "vue",
+        "prettier"
+    ],
+    "parserOptions": {
+        "parser": "babel-eslint"
+    },
+    "rules": {
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 2
+            }
+        ],
+        "no-debugger": 2,
+        "vue/component-name-in-template-casing": [
+            "error",
+            "PascalCase"
+        ],
+        "space-before-function-paren": 0,
+        "vue/require-prop-types": 0,
+        "vue/no-v-html": 0,
+        "vue/no-use-v-if-with-v-for": 0,
+        "vue/order-in-components": 0,
+        "vue/require-default-prop": 0,
+        "vue/no-unused-vars": 1,
+        "vue/html-self-closing": 0,
+        "vue/max-attributes-per-line": [
+            2,
+            {
+                "singleline": 1,
+                "multiline": {
+                    "max": 1,
+                    "allowFirstLine": false
+                }
+            }
+        ],
+        "vue/html-indent": [
+            "error",
+            4,
+            {
+                "attribute": 1,
+                "closeBracket": 0,
+                "alignAttributesVertically": true,
+                "ignores": []
+            }
+        ],
+        "vue/html-closing-bracket-newline": [
+            "error",
+            {
+                "singleline": "never",
+                "multiline": "never"
+            }
+        ],
+        "quotes": [
+            2,
+            "single",
+            {
+                "allowTemplateLiterals": true
+            }
+        ]
+    }
+}

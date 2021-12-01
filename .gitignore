@@ -1,0 +1,36 @@
+.DS_Store
+/www/*
+/platforms/*
+/plugins/*
+config/environment.js
+config/environment-dev.js
+config/environment-prod.js
+config/environment-cordova.js
+
+.idea/*
+node_modules/*
+platforms/*
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+#Code coverage output
+/.nyc_output/*
+/coverage/*
+
+#push notification scripts
+*.keystore*
+.env
+
+#cordova build
+/.gradle/*
+build-mobile-app.sh
+.yarnrc
