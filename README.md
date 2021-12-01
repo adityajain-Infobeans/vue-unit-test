@@ -1,5 +1,3 @@
-myICC is a progressively enabled hybrid application
-
 # Table of Contents
 - [Configuration](#configuration)
 - [Setup for macOS](#setup-for-macos)
@@ -16,7 +14,7 @@ myICC is a progressively enabled hybrid application
 
     ` yarn dev `
 
-3. Create a build so that build assets are not virtual.  The contents of /www/ folder will be compiled
+3. Create a build so that build assets are not virtual.
 
     ` yarn build `
 
