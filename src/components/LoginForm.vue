@@ -1,39 +1,45 @@
 <template>
     <div>
-        <h1>{{ mainHeader }}</h1>
-        <h2>{{ formHeader }}</h2>
-        <form
-            method="post"
-            @submit.prevent="submitForm">
-            <label for="email">Email: </label><input
-                id="email"
-                v-model.lazy="emailData"
-                type="text"
-                name="email"
-                placeholder="Please enter your email"
-                data-testid="loginEmail"/>
-            <br />
-            <label for="password">Password: </label><input
-                id="password"
-                v-model.lazy="passwordData"
-                type="password"
-                name="password"
-                placeholder="Please enter your password"
-                data-testid="loginPassword"/>
-            <br />
-            <button
-                type="button"
-                data-testid="submitButton"
-                @click="submitForm">SUBMIT</button>
-        </form>
-        <span
-            v-if="responseMessage"
-            data-testid="responseMessage">{{ responseMessage }}</span>
+        <div
+            v-if="is_login"
+            data-testid="welcomeMessage">{{ welcomeMessage }}</div>
+        <div v-else>
+            <h1>{{ mainHeader }}</h1>
+            <h2>{{ formHeader }}</h2>
+            <form
+                method="post"
+                @submit.prevent="submitForm">
+                <label for="email">Email: </label><input
+                    id="email"
+                    v-model.lazy="emailData"
+                    type="text"
+                    name="email"
+                    placeholder="Please enter your email"
+                    data-testid="loginEmail"/>
+                <br />
+                <label for="password">Password: </label><input
+                    id="password"
+                    v-model.lazy="passwordData"
+                    type="password"
+                    name="password"
+                    placeholder="Please enter your password"
+                    data-testid="loginPassword"/>
+                <br />
+                <button
+                    type="button"
+                    data-testid="submitButton"
+                    @click="submitForm">SUBMIT</button>
+            </form>
+            <span
+                v-if="responseMessage"
+                data-testid="responseMessage">{{ responseMessage }}</span>
+        </div>
     </div>
 </template>
 
 <script>
 import { userLogin } from '../services/axios/index.js';
+import { mapGetters } from 'vuex';
 
 export default {
     name: 'LoginForm',
@@ -41,6 +47,7 @@ export default {
         return {
             mainHeader: 'Vue Unit Test Demo',
             formHeader: 'Login Form',
+            welcomeMessage: 'Welcome user!',
             emailData: '',
             passwordData: '',
             responseMessage: '',
@@ -101,6 +108,9 @@ export default {
                 this.responseMessage = '';
             }, 3000);
         },
+    },
+    computed: {
+        ...mapGetters({ is_login: 'Auth/is_login'}),
     },
 };
 </script>
