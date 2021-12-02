@@ -6,43 +6,12 @@ const path = require('path');
 //For service worker in localhost dev env.
 const PROXY_HOST = process.env.HOST || 'localhost';
 const PROXY_PORT = (process.env.PORT && Number(process.env.PORT)) || 8080;
-///////////////////////////CDN SETUP STARTS/////////////////////////////////////
-/**
- * CDN pull zone URL will be passed with the build command
- * eq. yarn build --cdn={cdn_pull_zone_url}
- */
-const COMMAND_ARGS = process.argv;
-let CDN_PUBLIC_PATH = ''; //default path without CDN
-//find the CDN_URL from the arguments array
-COMMAND_ARGS.forEach(arg => {
-    if (-1 !== arg.indexOf('cdn=')) {
-        //split the string to get CDN url
-        const [, CDN_URL] = arg.split('=');
-        CDN_PUBLIC_PATH = CDN_URL;
-    }
-});
-////////////////////////////CDN SETUP ENDS//////////////////////////////////////
 
 module.exports = {
     dev: {
         // Paths
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
-        proxyTable: [
-            //Set proxy for service worker scripts path on local dev server.
-            {
-                context: ['/sw.js', '/firebase-messaging-sw.js'],
-                target: `http://${PROXY_HOST}:${PROXY_PORT}/www/static/pwa`,
-            },
-            {
-                context: ['/static/img/icons/'],
-                target: `http://${PROXY_HOST}:${PROXY_PORT}/www`,
-            },
-            {
-                context: ['/static/favicon.ico'],
-                target: `http://${PROXY_HOST}:${PROXY_PORT}/www/static`,
-            },
-        ],
 
         // Various Dev Server settings
         host: 'localhost', // can be overwritten by process.env.HOST
@@ -76,7 +45,7 @@ module.exports = {
         assetsRoot: path.resolve(__dirname, '../www'),
         assetsSubDirectory: 'static',
         jsSubDirectory: 'static',
-        assetsPublicPath: CDN_PUBLIC_PATH || '/',
+        assetsPublicPath: '/',
 
         // Use Eslint Loader?
         // If true, your code will be linted during bundling and
@@ -104,5 +73,4 @@ module.exports = {
         // Set to `true` or `false` to always turn it on or off
         bundleAnalyzerReport: process.env.npm_config_report,
     },
-    CDN_PUBLIC_PATH,
 };

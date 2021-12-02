@@ -95,9 +95,7 @@ const webpackConfig = merge(baseWebpackConfig, {
 
         new webpack.optimize.OccurrenceOrderPlugin(true),
 
-        new InjectManifest({
-            swSrc: path.resolve(__dirname, '../pwa/service-workers/sw.js'),
-        }),
+        new InjectManifest({}),
         // Copy custom static assets
         new CopyWebpackPlugin([
             {
