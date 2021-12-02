@@ -1,10 +1,4 @@
-# Table of Contents
-- [Configuration](#configuration)
-- [Setup for macOS](#setup-for-macos)
-- [Testing](#testing)
-
-
-## Configuration
+## Project Commands
 
 1. Install all dependencies
 
@@ -23,56 +17,42 @@
     ` yarn lint `
 
 
-## Setup for macOS
+## Setup for Linux
 
 1.  NodeJS
 
     ```
-    $ brew install node
+    $ sudo apt install nodejs
     ```
 
 2.  Install NPM:
 
     ```
-    $ brew install npm
+    $ sudo apt install npm
     ```
 
 3.  Install Yarn
 
     ```
-    $ brew install yarn
+    $ npm install --global yarn
     ```
 
 4.  Clone the Repo and change to that directory:
 
     ```
-    git clone https://github.com/adityajain-Infobeans/vue-unit-test-POC
+    $ git clone https://github.com/adityajain-Infobeans/vue-unit-test-POC
     ```
 
 5.  Install all dependencies:
 
     ```
-    yarn install
+    $ yarn install
     ```
 
-## Testing
-
-#### Tools
-
--   Mocha test runner
--   Vue test utils
-
-#### Running tests
-
-```
-$ yarn test
-or
-$ yarn test --watch
-```
 
 #### Coverage Report Generation
 
-- Access the http://localhost/coverage dir in browser after running ``` yarn test ```
+- Access the coverage report in ```coverage``` directory, after running ``` yarn test ```
 
 
 #### Track a minimum code coverage and a history through git:
