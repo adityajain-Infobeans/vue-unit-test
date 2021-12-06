@@ -57,15 +57,15 @@
 
 ## References
 
-1.  [https://vue-test-utils.vuejs.org/] (Vue test utils)
+1.  [Vue test utils](https://vue-test-utils.vuejs.org/ "Vue test utils")
 
-2.  [https://mochajs.org/] (Mocha)
+2.  [Mocha](https://mochajs.org/ "Mocha")
 
-3.  [https://sinonjs.org/#get-started] (Sinon)
+3.  [Sinon](https://sinonjs.org/#get-started "Sinon")
 
-4.  [https://github.com/ctimmerm/axios-mock-adapter] (Mock Axios)
+4.  [Mock Axios](https://github.com/ctimmerm/axios-mock-adapter "Mock Axios")
 
-5.  [https://istanbul.js.org/docs/tutorials/mocha/] (Istanbul)
+5.  [Istanbul](https://istanbul.js.org/docs/tutorials/mocha/ "Istanbul")
 
 
 #### Coverage Report Generation
