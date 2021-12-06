@@ -13,6 +13,16 @@
     ` yarn build `
 
 
+## Test Cases Commands
+
+1. Run test for all the components / whole project.
+
+    ` yarn test `
+
+2. Run test for single component:
+
+    ` yarn test-single {test_file_path} `
+
 ## Setup for Linux
 
 1.  NodeJS
