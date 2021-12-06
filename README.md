@@ -12,10 +12,6 @@
 
     ` yarn build `
 
-4. Lint project - just in case before release :)
-
-    ` yarn lint `
-
 
 ## Setup for Linux
 
